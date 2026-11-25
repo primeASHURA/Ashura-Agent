@@ -1,18 +1,35 @@
 import java.net.URI
-plugins { id("com.android.application"); id("org.jetbrains.kotlin.android"); id("org.jetbrains.kotlin.plugin.compose") }
+plugins {
+    id("com.android.application")
+    id("org.jetbrains.kotlin.android")
+    id("org.jetbrains.kotlin.plugin.compose")
+}
+
 android {
     namespace = "ai.ashura.app"
     compileSdk = 36
-    defaultConfig { applicationId = "ai.ashura.app"; minSdk = 26; targetSdk = 36; versionCode = 1; versionName = "1.0.0"; testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner" }
-    buildFeatures { compose = true; buildConfig = true }
     defaultConfig {
+        applicationId = "ai.ashura.app"
+        minSdk = 26
+        targetSdk = 36
+        versionCode = 1
+        versionName = "1.0.0"
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
         for (field in listOf("PRIVACY_POLICY_URL", "AI_REPORT_URL")) {
             val url = providers.gradleProperty(field).orElse("").get()
             require(url.isEmpty() || (URI(url).scheme == "https" && !URI(url).host.isNullOrEmpty() && url.none { it == '"' || it == '\\' }))
             buildConfigField("String", field, "\"" + url + "\"")
         }
     }
-    compileOptions { sourceCompatibility = JavaVersion.VERSION_17; targetCompatibility = JavaVersion.VERSION_17 }
+    buildFeatures {
+        compose = true
+        buildConfig = true
+    }
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
     kotlinOptions { jvmTarget = "17" }
     buildTypes { release { isMinifyEnabled = false } }
     packaging {

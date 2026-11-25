@@ -26,7 +26,9 @@ Design references for the welcome screen, sidebar, and model & provider settings
 
 ## Install on Android
 
-Requires Android 8.0 or later.
+Requires Android 8.0 or later. Download the [debug APK](https://github.com/primeASHURA/Ashura-Agent/releases/download/v1.0.0-debug/ashura-agent-debug.apk) to install a test build.
+
+### Build from source
 
 1. Clone this repository and open it in Android Studio.
 2. Install Android SDK Platform 36 and use JDK 17 for Gradle.
