@@ -6,10 +6,9 @@ Ashura Agent is an Android coding agent built with Kotlin and Jetpack Compose. O
 
 ## Android UI preview
 
-<img src="docs/images/welcome-design.png" alt="Ashura Agent welcome screen design reference" width="300">
-
-<img src="docs/images/sidebar-design.png" alt="Ashura Agent sidebar design" width="270">
-<img src="docs/images/model-provider-design.png" alt="Ashura Agent model and provider design" width="270">
+| Welcome | Sidebar | Model & provider |
+| --- | --- | --- |
+| <img src="docs/images/welcome-design.png" alt="Welcome screen" width="220"> | <img src="docs/images/sidebar-design.png" alt="Sidebar" width="220"> | <img src="docs/images/model-provider-design.png" alt="Model and provider settings" width="220"> |
 
 Design references for the welcome screen, sidebar, and model & provider settings.
 
