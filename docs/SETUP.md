@@ -12,6 +12,17 @@ From PowerShell, with JAVA_HOME and ANDROID_HOME pointing to your installations:
 
 On macOS or Linux use ./gradlew with the same tasks. The debug APK is generated at app/build/outputs/apk/debug/app-debug.apk. The first build needs network access for Gradle and dependencies.
 
+## Install with ADB
+
+Connect the phone over USB, enable USB debugging and approve the device prompt.
+From the repository root, after building the APK:
+
+```sh
+adb devices
+adb install -r app/build/outputs/apk/debug/app-debug.apk
+adb shell am start -n ai.ashura.app/.MainActivity
+```
+
 ## First launch
 
 1. Open Ashura and choose a workspace folder.
@@ -33,3 +44,4 @@ git push -u origin main
 ```
 
 API credentials, local SDK paths, signed artifacts and signing keys belong outside the repository. The repository owner chooses the license and confirms redistribution rights for artwork before making the repository public.
+
