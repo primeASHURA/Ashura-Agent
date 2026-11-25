@@ -1,0 +1,2 @@
+# App variants for owned source projects
+Use this skill when the user wants another build of their own Android application. Start with their source project. Inspect Gradle applicationId, namespace, manifests and branding resources. Prefer product flavors and applicationIdSuffix so both editions can be maintained and installed independently. Keep the user's signing material outside the workspace tools. Verify variant-specific resources, launcher labels and provider authorities.
