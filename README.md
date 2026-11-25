@@ -2,7 +2,13 @@
 
 <img src="docs/images/ashura.png" alt="Ashura Agent avatar" width="144">
 
-Ashura Agent is a native Android coding assistant built with Kotlin and Jetpack Compose. Open a project folder, configure a model provider, and use Chat for questions or Agent mode for workspace tasks.
+Ashura Agent is an Android coding agent built with Kotlin and Jetpack Compose. Open a project folder, configure a model provider, and use Chat for questions or Agent mode for workspace tasks.
+
+## Android UI preview
+
+<img src="docs/images/welcome-design.png" alt="Ashura Agent welcome screen design reference" width="300">
+
+Welcome screen design reference.
 
 ## Features
 
